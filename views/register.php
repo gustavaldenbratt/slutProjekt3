@@ -1,15 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+   <?php include ('../templates/head.php')?>
 </head>
 <body>
 <h1>Registration Form</h1>
-<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+<!--<form action="" method="post">
     <input type="text" name="firstName" value="" placeholder="First Name">
     <input type="text" name="lastName" value="" placeholder="Last name">
     <input type="number" name="age" value="" placeholder="age">
@@ -21,6 +17,61 @@
     <input type="password" name="password" value="" placeholder="Password">
     <input type="password" name="password2" value="" placeholder="Password">
     <button type="submit" name="submit">Submit</button>
+</form>-->
+
+<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" id="regFrom">
+    <div class="form-row" >
+        <div class="form-group col-md-5">
+            <label for="inputfirstName4">First name</label>
+            <input type="text" name="firstName" value="" placeholder="First Name" class="form-control" id="inputfirstName4">
+        </div>
+        <div class="form-group col-md-5">
+            <label for="inputlastName4">Last name</label>
+            <input type="text" name="lastName" placeholder="Last name" class="form-control" id="inputlastName4">
+        </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-3">
+        <label for="inputAge">Age</label>
+        <input type="number" name="age" class="form-control" id="inputAge" placeholder="18">
+    </div>
+
+
+    <div class="form-group col-md-7">
+        <label for="inputEmail">email</label>
+        <input type="email" name="mail" value="" class="form-control" id="inputEmail" placeholder="email">
+    </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            <label for="inputAddress">Address</label>
+            <input type="text" name="address" class="form-control" id="inputAddress" placeholder="Address">
+
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputCity">City</label>
+            <input type="text" name="city" class="form-control" id="inputCity" placeholder="City">
+
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputZip">Zip Code</label>
+            <input type="number" name="zipCode" class="form-control" id="inputZip">
+        </div>
+
+        </div>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            <label for="inputPass">Password</label>
+            <input type="password" name="password" class="form-control" id="inputPass">
+        </div>
+        <div class="form-group col-md-5">
+            <label for="inputPass2">Confirm Password</label>
+            <input type="password" name="password2" class="form-control" id="inputPass2">
+        </div>
+
+    </div>
+
+    <button type="submit" name="submit" class="btn btn-success">Sign in</button>
 </form>
 
 
@@ -37,23 +88,23 @@ if(isset($_POST['submit'])){
     $city = $_POST['city'];
     $zipCode = $_POST['zipCode'];
     $password = $_POST['password'];
-    $password2 = $_POST['password2'];
+    //$password2 = $_POST['password2'];
 
-    $options = array("cost"=>4);
+    $options = array("cost"=>8);
     $hashPassword = password_hash($password,PASSWORD_BCRYPT,$options);
 
-    if ($password === $password2) {
+
+
         $sql = "insert into person (firstName, lastName, age ,mail, address, city, zipCode, password) value('".$firstName."', '".$lastName."', '".$age."', '".$email."' '".$address."', '".$city."', '".$zipCode."','" .$hashPassword."')";
         $result = mysqli_query($con, $sql);
-
-    }
-    if($result)
+        if($result)
     {
         echo "Registration successfully";
-    }
-    else{
-        echo "Password not match";
-    }
+        header('location: start.php');
+    } else {
+            echo 'something went wrong';
+        }
+
 }
 
 ?>
