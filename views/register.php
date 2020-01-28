@@ -6,19 +6,7 @@
 <body>
     <h1>Registration Form</h1>
 
-    <!--<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-    <input type="text" name="firstName" value="" placeholder="First Name">
-    <input type="text" name="lastName" value="" placeholder="Last name">
-    <input type="number" name="age" value="" placeholder="age">
 
-    <input type="text" name="mail" value="" placeholder="Email">
-    <input type="text" name="address" value="" placeholder="address">
-    <input type="text" name="city" value="" placeholder="city">
-    <input type="number" name="zipCode" value="" placeholder="zip code">
-    <input type="password" name="password" value="" placeholder="Password">
-    <input type="password" name="password2" value="" placeholder="Password">
-    <button type="submit" name="submit">Submit</button>
-    </form>-->
 
     <form id="regFrom" action="<?php echo $_SERVER['PHP_SELF']?>" method="post" >
     <div class="form-row" >
@@ -110,8 +98,9 @@ if(isset($_POST['submit'])) {
         $result = mysqli_query($con, $sql);
 
         if ($result) {
-            echo "Registration successfully";
             header('location: start.php');
+            echo "Registration successfully";
+
 
         }
     }

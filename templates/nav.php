@@ -1,3 +1,4 @@
+<?php session_start()?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,12 +21,12 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-        <a class="kundvagn" title="Visa kundvagnen" href="./kundvagn.php">Kungvagn (
+        <a class="kundvagn" title="Visa kundvagnen" href="../views/kundvagn.php"><i  class="fas fa-shopping-basket"></i> (
             <?php
 
 
             if(isset($_SESSION['cart'])){
-                echo count($_SESSION['cart']);
+                //echo count($_SESSION['cart']);
             }
             else{
                 echo "0";

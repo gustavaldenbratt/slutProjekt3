@@ -1,3 +1,18 @@
+<!doctype html>
+<?php
+//kundvagn
+?>
+<html>
+<head>
+    <?php
+    include('../templates/head.php');
+    ?>
+</head>
+<body>
+
+<?php
+include('../templates/nav.php');
+?>
 <section class="main">
     <?php
 
@@ -26,7 +41,7 @@
     }
     $arr_str .= ")";
     //db anstutning
-    $query = "SELECT * FROM products WHERE ID IN $arr_str ";
+    $query = "SELECT * FROM products WHERE prodID IN $arr_str ";
 
     mysqli_query($con,"SET NAMES utf8");
 
@@ -38,8 +53,8 @@
         <img class="img_cart" src="<?php echo $row['image'];?>"/>
         <?php
         $counts = array_count_values($_SESSION['cart']);
-        $sum += $counts[$row['id']] * $row['price'];
-        echo $counts[$row['id']];
+        $sum += $counts[$row['ID']] * $row['price'];
+        echo $counts[$row['ID']];
         echo $row['name'];
 
         ?> <br>
@@ -55,3 +70,13 @@
         <form method="GET" action="checkout.php">
             <button name="complete" type="submit">köp</button>
         </form>
+
+
+
+
+
+
+</section>
+
+</body>
+</html>
