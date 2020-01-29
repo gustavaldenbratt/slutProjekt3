@@ -42,7 +42,7 @@ include('../templates/nav.php');
 
 </section>
 <?php
-var_dump($_SESSION['cart']);
+
 
 ?>
 </body>

@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2eba47-bfc1-4d04-abdc-5fc232a8b9ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/loginBack.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/loginSite.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/submit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/kundvagn.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/kundvagn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/p.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/p.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login1.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register2.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/start.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/start.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +104,7 @@
       <workItem from="1579858199353" duration="5319000" />
       <workItem from="1579869018451" duration="5372000" />
       <workItem from="1580109289436" duration="9516000" />
-      <workItem from="1580206302094" duration="8798000" />
+      <workItem from="1580206302094" duration="13292000" />
     </task>
     <servers />
   </component>

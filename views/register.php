@@ -8,7 +8,7 @@
 
 
 
-    <form id="regFrom" action="<?php echo $_SERVER['PHP_SELF']?>" method="post" >
+    <form id="regFrom" action="submit.php" method="post" >
     <div class="form-row" >
         <div class="form-group col-md-5">
             <label for="inputfirstName4">First name</label>
@@ -66,47 +66,7 @@
 
 
 
-<?php
-require_once("../connect.php");
-if(isset($_POST['submit'])) {
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $age = $_POST['age'];
-    $email = $_POST['mail'];
-    $address = $_POST['address'];
-    $city = $_POST['city'];
-    $zipCode = $_POST['zipCode'];
-    $password = $_POST['password'];
-    $cpassword = $_POST['cpassword'];
-    $slquery = "SELECT 1 FROM person WHERE mail = '$email'";
-    $selectresult = mysqli_query($con, $slquery);
-    if (mysqli_num_rows($selectresult) > 0) {
-        $msg = 'email already exists';
-        echo $msg;
 
-    } elseif ($password != $cpassword) {
-
-        $msg = "passwords doesn't match";
-        echo $msg;
-
-    } else {
-
-        $options = array("cost" => 10);
-        $hashPassword = password_hash($password, PASSWORD_BCRYPT, $options);
-
-        $sql = "insert into person (firstName, lastName, age ,mail, address, city, zipCode, password ) value('" . $firstName . "', '" . $lastName . "', '" . $age . "', '" . $email . "', '" . $address . "', '" . $city . "', '" . $zipCode . "','" . $hashPassword . "')";
-        $result = mysqli_query($con, $sql);
-
-        if ($result) {
-            header('location: start.php');
-            echo "Registration successfully";
-
-
-        }
-    }
-}
-
-?>
 </body>
 </html>
 

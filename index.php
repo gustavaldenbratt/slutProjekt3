@@ -10,7 +10,7 @@
 
             <p>Create an account or login</p>
             <a href="./views/register.php" class="btn btn-success btn-block mb-2">Register</a>
-            <a href="./views/login.php" class="btn btn-success btn-block">Login</a>
+            <a href="views/login1.php" class="btn btn-success btn-block">Login</a>
         </div>
     </div>
 </div>

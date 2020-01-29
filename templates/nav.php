@@ -21,6 +21,8 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
+
+
         <a class="kundvagn" title="Visa kundvagnen" href="../views/kundvagn.php"><i  class="fas fa-shopping-basket"></i> (
             <?php
 
