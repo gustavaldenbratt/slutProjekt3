@@ -1,5 +1,10 @@
 <!doctype html>
 <?php //redigera sin användarprofil
+$login = 'Please Login';
+if(!isset($_SESSION['login'])) {
+    echo "<script>alert('$login'); </script>";
+    echo "<script>window.open('../index.php','_self'); </script>";
+}
 ?>
 <html>
 <head>
@@ -9,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../style.css"/>
 
 </head>
-<body>
+<body id="editMain">
 
 <?php
 include('../templates/nav.php');
@@ -43,46 +48,46 @@ include('../templates/nav.php');
     <div class="edit-div">
 
         <form class="edit form-inline " action="edit_back.php" method="post">
-            <label for="inputName3" class="col-sm-2 col-form-label col-form-label-lg">Firstname: <?php echo $row['firstName'];?></label>
-            <input type="text" class="form-control" name="firstName">
+            <label for="inputName3" class="col-sm-2 col-form-label col-form-label-lg">Firstname:</label>
+            <input type="text" class="form-control" name="firstName" placeholder=" <?php echo $row['firstName'];?>">
             <input type="submit" class="btn btn-success" value="Uppdatera">
         </form><br>
 
         <form class="edit form-inline " action="edit_back.php" method="post">
-            <label for="inputName3" class="col-sm-2 col-form-label col-form-label-lg">Lastname: <?php echo $row['lastName'];?></label>
-            <input type="text" class="form-control" name="lastName">
+            <label for="inputName3" class="col-sm-2 col-form-label col-form-label-lg">Lastname:</label>
+            <input type="text" class="form-control" name="lastName"  placeholder=" <?php echo $row['lastName'];?>">
             <input type="submit" class="btn btn-success" value="Uppdatera">
         </form><br>
 
         <form class="edit form-inline " action="edit_back.php" method="post">
-            <label for="inputName3" class="col-sm-2 col-form-label col-form-label-lg">age: <?php echo $row['age'];?></label>
-            <input type="number" class="form-control" name="age">
+            <label for="inputName3" class="col-sm-2 col-form-label col-form-label-lg">age: </label>
+            <input type="number" class="form-control" name="age"  placeholder="<?php echo $row['age'];?>">
             <input type="submit" class="btn btn-success" value="Uppdatera">
         </form><br>
 
 
 
         <form class="edit form-inline" action="edit_back.php" method ="post">
-            <label for="inputEmail3" class="col-sm-2 col-form-label col-form-label-lg">Mail: <?php echo $row['mail'];?></label>
-            <input  type="email" class="form-control" name="mail">
+            <label for="inputEmail3" class="col-sm-2 col-form-label col-form-label-lg">Mail: </label>
+            <input  type="email" class="form-control" name="mail" placeholder="<?php echo $row['mail'];?>">
             <input type="submit" class="btn btn-success" value="Uppdatera">
         </form><br>
 
         <form class="edit form-inline" action="edit_back.php" method ="post">
-            <label for="inputEmail3" class="col-sm-2 col-form-label col-form-label-lg">Address: <?php echo $row['address'];?></label>
-            <input  type="text" class="form-control" name="address">
+            <label for="inputEmail3" class="col-sm-2 col-form-label col-form-label-lg">Address: </label>
+            <input  type="text" class="form-control" name="address" placeholder="<?php echo $row['address'];?>">
             <input type="submit" class="btn btn-success" value="Uppdatera">
         </form><br>
 
         <form class="edit form-inline" action="edit_back.php" method ="post">
-            <label for="inputEmail3" class="col-sm-2 col-form-label col-form-label-lg">City: <?php echo $row['city'];?></label>
-            <input  type="text" class="form-control" name="city">
-            <input type="submit" class="btn btn-success" value="Uppdatera">
+            <label for="inputEmail3" class="col-sm-2 col-form-label col-form-label-lg">City:</label>
+            <input  type="text" class="form-control" name="city" placeholder=" <?php echo $row['city'];?>">
+            <input type="submit" class="btn btn-success" value="Uppdatera" >
         </form><br>
 
         <form class="edit form-inline" action="edit_back.php" method ="post">
-            <label for="inputEmail3" class="col-sm-2 col-form-label col-form-label-lg">Address: <?php echo $row['zipCode'];?></label>
-            <input  type="number" class="form-control" name="zipCode">
+            <label for="inputEmail3" class="col-sm-2 col-form-label col-form-label-lg">Zipcode:</label>
+            <input  type="number" class="form-control" name="zipCode"  placeholder=" <?php echo $row['zipCode'];?>">
             <input type="submit" class="btn btn-success" value="Uppdatera">
         </form><br>
 
@@ -93,11 +98,7 @@ include('../templates/nav.php');
             <input type="submit" class="btn btn-success" value="Uppdatera">
         </form><br>
 
-        <form class="edit form-inline" action="edit_back.php" method ="post">
-            <label class="col-sm-2 col-form-label col-form-label-lg">Bekräfta Lösenord</label>
-            <input type="password" class="form-control" name="cpassword">
-            <input type="submit" class="btn btn-success" value="Uppdatera">
-        </form>
+
     </div>
     </div>
 

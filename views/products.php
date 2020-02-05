@@ -4,6 +4,11 @@
 <html lang="sv">
 <head>
     <?php
+    $login = 'Please Login';
+    if(!isset($_SESSION['login'])) {
+        echo "<script>alert('$login'); </script>";
+        echo "<script>window.open('../index.php','_self'); </script>";
+    }
     include('../templates/head.php'); ?>
 </head>
 <body>

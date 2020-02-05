@@ -18,16 +18,43 @@
     #regFrom {
         margin-left: 5px;
     }
+    #editMain{
+        background-color: #ffffe6;
+    }
     #edit-con {
         display: flex;
-        justify-content: center!important;
+        justify-content: center;
+        position: absolute;
+        bottom: 25%;
+        width: 100%;
+
 
 
     }
     .edit-div{
-        width: 50%;
+        padding-left: 3vh;
+    border: 1px solid black;
+        border-radius: 15px 50px;
+        margin: 0 auto;
+
+        background-color: gray;
+
+
 
 
     }
+    .edit-div form input[type="text"]{
+        margin-left: 10vh;
+    }
+    .edit-div form input[type="number"]{
+         margin-left: 10vh;
+     }
+    .edit-div form input[type="email"]{
+        margin-left: 10vh;
+    }
+    .edit-div form input[type="password"]{
+        margin-left: 10vh;
+    }
+
 
 </style>
