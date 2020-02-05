@@ -30,9 +30,13 @@
 
 
 include('../connect.php');
-if (isset($_POST['submit'])) {
+/*if (isset($_POST['submit'])) {
     $mail = trim($_POST['mail']);
-    $password = trim($_POST['password']);
+    $password = trim($_POST['password']);*/
+
+if(isset($_POST['mail']) && isset($_POST['password'])) {
+    $mail = $_POST['mail'];
+    $password = $_POST['password'];
 
     $sql = "select * from person where mail = '" . $mail . "'";
     $rs = mysqli_query($con, $sql);

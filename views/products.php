@@ -28,7 +28,7 @@ include('../templates/nav.php');
 
     while($row = mysqli_fetch_array($result)){
         ?>   <!--produkt con-->
-        <div class="prodCon">
+        <div class="prodCon" style="float: left; margin: 5px;">
          <div class="img_con">
             <img class="img" src="<?php echo $row['image'];?>"/>
             <?php
