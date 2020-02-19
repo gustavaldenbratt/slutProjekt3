@@ -25,7 +25,7 @@
         display: flex;
         justify-content: center;
         position: absolute;
-        bottom: 25%;
+        bottom: 15%;
         width: 100%;
 
 
@@ -54,6 +54,19 @@
     }
     .edit-div form input[type="password"]{
         margin-left: 10vh;
+    }
+    .img_con_cart {
+
+        float: left;
+        height: 150px;
+        width: 600px;
+        border: 2px solid black;
+        font-size: 20px;
+    }
+    .img_cart {
+
+        width: 100px;
+        height: 100px;
     }
 
 

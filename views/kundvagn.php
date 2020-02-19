@@ -1,15 +1,16 @@
 <!doctype html>
 <?php
+session_start();
 //kundvagn
 ?>
 <html>
 <head>
-    <?php
-    include('../templates/head.php');
-    ?>
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-
+<?php
+include('../templates/head.php');
+?>
 <?php
 include('../templates/nav.php');
 ?>
@@ -18,7 +19,7 @@ include('../templates/nav.php');
 
     //tommer kundvagn
     if(isset($_GET['action']) && $_GET['action'] == "clear_cart"){
-        $_SESSION['cart'] = array();
+        $_SESSION['cart'] = array();;
         header("location: index.php");
     }
     //db anslutning
@@ -53,8 +54,8 @@ include('../templates/nav.php');
         <img class="img_cart" src="<?php echo $row['image'];?>"/>
         <?php
         $counts = array_count_values($_SESSION['cart']);
-        $sum += $counts[$row['ID']] * $row['price'];
-        echo $counts[$row['ID']];
+        $sum += $counts[$row['prodID']] * $row['price'];
+        echo $counts[$row['prodID']];
         echo $row['name'];
 
         ?> <br>

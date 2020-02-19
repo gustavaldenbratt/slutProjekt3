@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //db anslutning
 include('../connect.php');
 
@@ -11,8 +11,8 @@ if(isset($_SESSION['ID'])){
         //db fråga
         $query = "UPDATE person SET firstName = '$firstName' WHERE ID = $id";
         mysqli_query($con,$query);
-        header('location:edit.php');
-
+        //header('location:edit.php');
+        echo "<script>window.open('edit.php', '_self')</script>";
     }
     if(isset($_SESSION['ID'])){
         if(isset($_POST['lastName'])){
@@ -22,7 +22,7 @@ if(isset($_SESSION['ID'])){
             //db fråga
             $query = "UPDATE person SET lastName = '$lastName' WHERE ID = $id";
             mysqli_query($con,$query);
-            header('location:edit.php');
+            echo "<script>window.open('edit.php', '_self')</script>";
 
         }
     if(isset($_POST['age'])){
@@ -32,7 +32,7 @@ if(isset($_SESSION['ID'])){
         //db fråga
         $query = "UPDATE person SET age = '$age' WHERE ID = $id";
         mysqli_query($con,$query);
-        header('location:edit.php');
+        echo "<script>window.open('edit.php', '_self')</script>";
 
     }
 
@@ -43,7 +43,7 @@ if(isset($_SESSION['ID'])){
         //db fråga
         $query = "UPDATE person SET mail = '$mail' WHERE ID = $id";
         mysqli_query($con,$query);
-        header('location:edit.php');
+        echo "<script>window.open('edit.php', '_self')</script>";
 
     }
 
@@ -54,7 +54,7 @@ if(isset($_SESSION['ID'])){
         //db fråga
         $query = "UPDATE person SET address = '$address' WHERE ID = $id";
         mysqli_query($con,$query);
-        header('location:edit.php');
+        echo "<script>window.open('edit.php', '_self')</script>";
 
     }
 
@@ -65,7 +65,7 @@ if(isset($_SESSION['ID'])){
         //db fråga
         $query = "UPDATE person SET city = '$city' WHERE ID = $id";
         mysqli_query($con,$query);
-        header('location:edit.php');
+        echo "<script>window.open('edit.php', '_self')</script>";
 
     }
 
@@ -76,7 +76,7 @@ if(isset($_SESSION['ID'])){
         //db fråga
         $query = "UPDATE person SET zipCode = '$zipCode' WHERE ID = $id";
         mysqli_query($con,$query);
-        header('location:edit.php');
+        echo "<script>window.open('edit.php', '_self')</script>";
 
     }
     if(isset($_POST['pass'])){
@@ -88,7 +88,7 @@ if(isset($_SESSION['ID'])){
         //db fråga
         $query = "UPDATE person SET password = '$hashPassword' WHERE ID = $id";
         mysqli_query($con,$query);
-        header('location:edit.php');
+        echo "<script>window.open('edit.php', '_self')</script>";
 
     }
 

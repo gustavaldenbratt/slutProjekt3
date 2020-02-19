@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $login = 'Please login';
 if(!isset($_SESSION['login'])) {
     echo "<script>alert('$login'); </script>";
@@ -6,6 +6,7 @@ if(!isset($_SESSION['login'])) {
 }
 include ('../templates/head.php');
 include ('../templates/nav.php');
+
 
 
 

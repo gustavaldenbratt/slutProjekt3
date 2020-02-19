@@ -1,10 +1,11 @@
 <!doctype html>
 <?php //redigera sin användarprofil
+session_start();
 $login = 'Please Login';
-if(!isset($_SESSION['login'])) {
-    echo "<script>alert('$login'); </script>";
-    echo "<script>window.open('../index.php','_self'); </script>";
-}
+//if(!isset($_SESSION['login'])) {
+  //  echo "<script>alert('$login'); </script>";
+    //echo "<script>window.open('../index.php','_self'); </script>";
+//}
 ?>
 <html>
 <head>

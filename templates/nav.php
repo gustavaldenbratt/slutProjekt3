@@ -37,26 +37,26 @@
 
                     ?> <form style="margin-right: 1%" class="logout" action="../logout.php">
             <input class="btn btn-danger" type="submit" value="Logga ut">
-        </form> <?php
+        </form>  <a class="kundvagn" title="Visa kundvagnen" href="../views/kundvagn.php"><i  class="fas fa-shopping-basket"></i> (
+                    <?php
+
+
+                    if(isset($_SESSION['cart'])){
+                        echo count($_SESSION['cart']);
+                    }
+                    else{
+                        echo "0";
+                    }
+
+                    ?>
+                    )</a> <?php
             }
+
         }?>
                 </p>
 
 
 
-        <a class="kundvagn" title="Visa kundvagnen" href="../views/kundvagn.php"><i  class="fas fa-shopping-basket"></i> (
-            <?php
 
-
-            if(isset($_SESSION['cart'])){
-                //echo count($_SESSION['cart']);
-            }
-            else{
-                echo "0";
-            }
-
-
-            ?>
-            )</a>
     </div>
 </nav>

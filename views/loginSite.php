@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include('../templates/head.php') ?>
+    <?php
+    session_start();
+    include('../templates/head.php') ?>
 </head>
 <body>
 <?php include('../templates/nav.php') ?>

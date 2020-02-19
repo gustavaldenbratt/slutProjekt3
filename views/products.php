@@ -1,9 +1,10 @@
-
+<?php session_start(); ?>
 <!doctype html>
 <!--startsida-->
 <html lang="sv">
 <head>
     <?php
+
     $login = 'Please Login';
     if(!isset($_SESSION['login'])) {
         echo "<script>alert('$login'); </script>";
@@ -18,7 +19,11 @@ include('../templates/nav.php');
 ?>
 <section class="main">
 
+
+
     <?php //db anslutning
+
+
     include('../connect.php');
 
 
@@ -40,15 +45,13 @@ include('../templates/nav.php');
             echo $row['name'];
             ?> <br> <?php
             echo $row['price'];  ?>
-            <a class="buy" href="p.php?id=<?php echo $row['prodID'];  ?>">KÖP</a></div> </div><?php } ?>
+            <a class="buy" href="p.php?prodID=<?php echo $row['prodID'];  ?>">KÖP</a></div> </div><?php }  var_dump($_SESSION['cart']); ?>
 
 
 
 
 </section>
-<?php
 
 
-?>
 </body>
 </html>
