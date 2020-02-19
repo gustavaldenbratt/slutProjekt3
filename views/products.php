@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!doctype html>
 <!--startsida-->
 <html lang="sv">
@@ -40,12 +40,13 @@ include('../templates/nav.php');
         ?>   <!--produkt con-->
         <div class="prodCon" style="float: left; margin: 5px;">
          <div class="img_con">
-            <img class="img" src="<?php echo $row['image'];?>"/>
+             <a href="products/product<?php echo $row['prodID'] ?>.php">
+            <img class="img" src="<?php echo $row['image'];?>"/></a> <br>
             <?php
             echo $row['name'];
-            ?> <br> <?php
-            echo $row['price'];  ?>
-            <a class="buy" href="p.php?prodID=<?php echo $row['prodID'];  ?>">KÖP</a></div> </div><?php }  var_dump($_SESSION['cart']); ?>
+            ?> <br>$ <?php
+            echo $row['price'];  ?> <br>
+            <a class="buy" href="p.php?prodID=<?php echo $row['prodID'];  ?>">Lägg till i kundvagnen</a></div> </div><?php }  ?>
 
 
 

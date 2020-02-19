@@ -1,4 +1,4 @@
-<?php session_start();
+<?php
 $login = 'Please login';
 if(!isset($_SESSION['login'])) {
     echo "<script>alert('$login'); </script>";

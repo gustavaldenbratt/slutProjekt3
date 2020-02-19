@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <?php
-    session_start();
+   //session_start();
     include('../templates/head.php') ?>
 </head>
 <body>

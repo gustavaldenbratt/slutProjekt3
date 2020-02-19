@@ -1,4 +1,4 @@
-<?php// session_start()?>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,10 @@
 
                     ?> <form style="margin-right: 1%" class="logout" action="../logout.php">
             <input class="btn btn-danger" type="submit" value="Logga ut">
-        </form>  <a class="kundvagn" title="Visa kundvagnen" href="../views/kundvagn.php"><i  class="fas fa-shopping-basket"></i> (
+        </form>
+                <a class="empty" style="padding-right: 5px;" title="Töm alla varor ur kundvagnen" href="../views/kundvagn.php?action=clear_cart" method="GET" >töm kundvagn
+                </a>
+                <a class="kundvagn" title="Visa kundvagnen" href="../views/kundvagn.php"><i  class="fas fa-shopping-basket"></i> (
                     <?php
 
 

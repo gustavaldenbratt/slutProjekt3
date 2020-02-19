@@ -1,6 +1,6 @@
 <!doctype html>
 <?php
-session_start();
+
 //kundvagn
 ?>
 <html>
@@ -20,7 +20,7 @@ include('../templates/nav.php');
     //tommer kundvagn
     if(isset($_GET['action']) && $_GET['action'] == "clear_cart"){
         $_SESSION['cart'] = array();;
-        header("location: index.php");
+        echo "<script>window.open('products.php', '_self')</script>";
     }
     //db anslutning
     include('../connect.php');
