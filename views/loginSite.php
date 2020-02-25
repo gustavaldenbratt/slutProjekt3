@@ -1,9 +1,9 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php
-   //session_start();
+
     include('../templates/head.php') ?>
 </head>
 <body>
@@ -12,15 +12,18 @@
 
 <div id="loginCon">
     <div class="formBG">
-        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address<span style="color: red"> *</span></label>
-                <input type="email" name="mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="required">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <input type="email" name="mail" class="form-control" id="exampleInputEmail1"
+                       aria-describedby="emailHelp" required="required">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password<span style="color: red"> *</span></label>
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1" required="required">
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                       required="required">
             </div>
             <button type="submit" class="btn btn-success" name="submit">Submit</button>
         </form>
@@ -29,14 +32,12 @@
 <?php
 
 
-
-
 include('../connect.php');
 /*if (isset($_POST['submit'])) {
     $mail = trim($_POST['mail']);
     $password = trim($_POST['password']);*/
 
-if(isset($_POST['mail']) && isset($_POST['password'])) {
+if (isset($_POST['mail']) && isset($_POST['password'])) {
     $mail = $_POST['mail'];
     $password = $_POST['password'];
 

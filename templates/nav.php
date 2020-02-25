@@ -22,11 +22,6 @@
         </ul>
 
         <?php if(isset($_SESSION['login'])){
-            // har besökt sidan
-
-            // OM MAN ÄR INLOGGAD
-            if($_SESSION['login'] == "INLOGGAD"){
-                $show_form = false; // VISA INTE FORMULÄREN
 
                 ?>
 
@@ -53,7 +48,7 @@
 
                     ?>
                     )</a> <?php
-            }
+
 
         }?>
                 </p>

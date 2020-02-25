@@ -19,7 +19,7 @@
         margin-left: 5px;
     }
     #editMain{
-        background-color: #ffffe6;
+        background-color: floralwhite;
     }
     #edit-con {
         display: flex;

@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <?php include ('../templates/head.php')?>
+    <?php include('../templates/head.php') ?>
 </head>
 <body>
-    <h1>Registration Form</h1>
+<h1>Registration Form</h1>
 
 
-
-    <form id="regFrom" action="submit.php" method="post" >
-    <div class="form-row" >
+<form id="regFrom" action="submit.php" method="post">
+    <div class="form-row">
         <div class="form-group col-md-5">
             <label for="inputfirstName4">First name</label>
-            <input type="text" name="firstName" value="" placeholder="First Name" class="form-control" id="inputfirstName4">
+            <input type="text" name="firstName" value="" placeholder="First Name" class="form-control"
+                   id="inputfirstName4">
         </div>
         <div class="form-group col-md-5">
             <label for="inputlastName4">Last name</label>
@@ -62,9 +62,6 @@
 
     <button type="submit" name="submit" class="btn btn-success">submit</button>
 </form>
-
-
-
 
 
 </body>
