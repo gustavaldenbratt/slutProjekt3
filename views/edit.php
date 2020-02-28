@@ -9,10 +9,11 @@ if (!isset($_SESSION['login'])) {
 ?>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../style.css"/>
+
     <?php
 
-    include('../templates/head.php')
+    require('../templates/head.php');
+
     ?>
 
 

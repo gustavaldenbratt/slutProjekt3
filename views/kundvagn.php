@@ -77,12 +77,21 @@ include('../templates/nav.php');
                             <button name="deleteProd"> delete</button>
                         </form>
                     </td>
+
                 </tr>
-            <?php }
-            } ?>
+
+            <?php
+            }
+            }
+
+
+
+            ?>
             </tbody>
         </table>
+
     </div>
+    <?php     echo $sum; ?>
 
     <!--skickar till checkout.php-->
     <form method="GET" action="checkout.php">

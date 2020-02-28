@@ -31,3 +31,31 @@ create table admin (
     details TEXT,
     primary key(ID)
     );
+
+create table orders(
+                       id int(8) primary key auto_increment,
+                       customer_id int(8),
+                       foreign key (customer_id) references person(ID),
+                       created varchar(32),
+                       shipped varchar(32)
+);
+
+create table order_details(
+                              order_id int(8),
+                              foreign key (order_id) references orders(id),
+                              product_id int(8),
+                              foreign key (product_id) references products(prodID),
+                              product_name varchar(255),
+                              foreign key (product_name) references products(name),
+                              product_price int(8),
+                              foreign key (product_price) references products(price),
+                              quantity int(8)
+);
+
+create table contact(
+    id int(8) primary key auto_increment,
+    name varchar(255),
+    email varchar(255),
+    subject varchar(255),
+    message text
+);

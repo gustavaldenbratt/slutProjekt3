@@ -12,12 +12,12 @@
     }
     include('../templates/head.php'); ?>
 </head>
-<body>
+<body id="pMain">
 
 <?php
 include('../templates/nav.php');
 ?>
-<section class="main">
+<section>
 
 
     <?php //db anslutning
@@ -35,7 +35,7 @@ include('../templates/nav.php');
 
     while ($row = mysqli_fetch_array($result)) {
         ?>   <!--produkt con-->
-        <div class="prodCon" style="float: left; margin: 5px;">
+        <div class="prodCon" style="float: left; margin: 3%;">
         <div class="img_con">
             <a href="products/product<?php echo $row['prodID'] ?>.php">
                 <img class="img" src="<?php echo $row['image']; ?>"/></a> <br>
@@ -48,7 +48,8 @@ include('../templates/nav.php');
 
 
 </section>
-
-
+<footer>
+<?php include ('../templates/footer.php')?>
+</footer>
 </body>
 </html>

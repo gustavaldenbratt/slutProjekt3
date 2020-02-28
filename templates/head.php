@@ -11,63 +11,6 @@
 <link rel="stylesheet" type="text/css" href="../style.css"/>
 
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    #regFrom {
-        margin-left: 5px;
-    }
-    #editMain{
-        background-color: floralwhite;
-    }
-    #edit-con {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 15%;
-        width: 100%;
-
-
-
-    }
-    .edit-div{
-        padding-left: 3vh;
-    border: 1px solid black;
-        border-radius: 15px 50px;
-        margin: 0 auto;
-
-        background-color: gray;
-
-
-
-
-    }
-    .edit-div form input[type="text"]{
-        margin-left: 10vh;
-    }
-    .edit-div form input[type="number"]{
-         margin-left: 10vh;
-     }
-    .edit-div form input[type="email"]{
-        margin-left: 10vh;
-    }
-    .edit-div form input[type="password"]{
-        margin-left: 10vh;
-    }
-    .img_con_cart {
-
-        float: left;
-        height: 150px;
-        width: 600px;
-        border: 2px solid black;
-        font-size: 20px;
-    }
-    .img_cart {
-
-        width: 100px;
-        height: 100px;
-    }
 
 
 </style>

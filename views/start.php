@@ -1,3 +1,10 @@
+<head>
+    <style>
+        footer {
+            margin-top: 86vh;
+        }
+    </style>
+</head>
 <?php
 session_start();
 $login = 'Please login';
@@ -7,7 +14,7 @@ if (!isset($_SESSION['login'])) {
 }
 include('../templates/head.php');
 include('../templates/nav.php');
-
+include ('../templates/footer.php');
 
 
 
