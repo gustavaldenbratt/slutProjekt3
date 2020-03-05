@@ -45,10 +45,10 @@ create table order_details(
                               foreign key (order_id) references orders(id),
                               product_id int(8),
                               foreign key (product_id) references products(prodID),
-                              product_name varchar(255),
-                              foreign key (product_name) references products(name),
-                              product_price int(8),
-                              foreign key (product_price) references products(price),
+                            --  product_name varchar(255),
+                             --foreign key (product_name) references products(name),
+                            --  product_price int(8),
+                            --  foreign key (product_price) references products(price),
                               quantity int(8)
 );
 

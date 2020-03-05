@@ -22,7 +22,7 @@ if($_SESSION['login'] == "INLOGGAD"){
     for($i = 0 ; $i < sizeof($_SESSION['cart']) ; $i++){
         $pid = $_SESSION['cart'][$i];
         var_dump($i);
-        $query = "INSERT INTO order_details (order_id, product_id, quantity) VALUES ($orderid,$pid, )";
+        $query = "INSERT INTO order_details (order_id, product_id) VALUES ($orderid,$pid)";
 
         mysqli_query($con,$query);
     }

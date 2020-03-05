@@ -66,7 +66,7 @@ include('../templates/nav.php');
                 ?>               <!--produkt con-->
                 <tr>
                     <th scope="row">1</th>
-                    <td style="margin: 0; width: 200px"><img src="<?php echo $row['image']; ?>" height="10%"></td>
+                    <td style="margin: 0; width: 200px"><img src="<?php echo $row['image']; ?>" height="1%"></td>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php $counts = array_count_values($_SESSION['cart']);
                         $sum += $counts[$row['prodID']] * $row['price'];

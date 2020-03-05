@@ -73,7 +73,7 @@ body {
     margin-left: 5px;
 }
 #editMain{
-    background-color: aqua;
+    background-color:floralwhite;
 }
 #edit-con {
     display: flex;
@@ -132,6 +132,9 @@ body {
 
     content: "*";
 
+}
+section{
+    min-height: 100vh;
 }
 
 
