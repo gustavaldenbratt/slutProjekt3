@@ -39,9 +39,10 @@ include('../templates/nav.php');
         <div class="img_con">
             <a href="products/product<?php echo $row['prodID'] ?>.php">
                 <img class="img" src="<?php echo $row['image']; ?>"/></a> <br>
-            <?php
-            echo $row['name'];
-            ?> <br>$ <?php
+            <h4><?php
+            echo $row['name'];?></h4><p>
+            <?php echo $row['details'];
+            ?> </p> $ <?php
             echo $row['price']; ?> <br>
             <a class="buy" href="p.php?prodID=<?php echo $row['prodID']; ?>">Lägg till i kundvagnen</a></div>
         </div><?php } ?>

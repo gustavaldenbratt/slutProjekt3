@@ -1,22 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        footer {
-            margin-top: 86vh;
-        }
+    <?php
+include('../templates/head.php');
+?>    
+<style>
     </style>
 </head>
+
 <?php
 session_start();
 $login = 'Please login';
 if (!isset($_SESSION['login'])) {
     echo "<script>alert('$login'); </script>";
     echo "<script>window.open('../index.php','_self'); </script>";
-}
-include('../templates/head.php');
+} ?>
+
+
+
+
+
+<body> <?php
 include('../templates/nav.php');
-include ('../templates/footer.php');
+?>    
+<section>
+</section>
+    <?php
 
-
-
+include('../templates/footer.php');
+?>
+</body>
+</html>
 
 

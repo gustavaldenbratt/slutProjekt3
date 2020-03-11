@@ -27,10 +27,22 @@ if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['age
     // OM FRÅGAN GÅTT BRA
     if (mysqli_query($con, $query)) {
         // SKICKAS TILL INDEX
-        header("Location: start.php");
+        $sql = "select * from person where mail = '" . $mail . "'";
+        $rs = mysqli_query($con, $sql);
+        $numRows = mysqli_num_rows($rs);
+    
+        if ($numRows == 1) {
+            $row = mysqli_fetch_assoc($rs);
+            if (password_verify($password, $row['password'])) {
+                $_SESSION['firstName'] = $row['firstName'];
+                $_SESSION['ID'] = $row['ID'];
+                $_SESSION['login'] = "INLOGGAD";
+                header('location: start.php');
+            }
     } else { // NÅGOT GICK FEL
         // SKAPA ETT ERRORMEDDELADNE
         $_SESSION['error_msg'] = "Upptagen mail!";
+        //header('location: start.php');
 
     }
-}
+}}

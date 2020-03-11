@@ -44,6 +44,7 @@ $row = mysqli_fetch_array($result);
 
 
 <!--formulär för redigering av användarprofil-->
+<section>
 <div id="edit-con">
     <div class="edit-div">
 
@@ -108,7 +109,7 @@ $row = mysqli_fetch_array($result);
 
     </div>
 </div>
-
-
+</section>
+ <?php include('../templates/footer.php'); ?>
 </body>
 </html>

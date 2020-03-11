@@ -53,11 +53,11 @@ include('../templates/nav.php');
         <table class="table table-striped">
             <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">Price</th>
+               
+                <th scope="col"></th>
+                <th scope="col">produkt namn</th>
+                <th scope="col">antal</th>
+                <th scope="col">pris</th>
                 <th> ta bort</th>
             </tr>
             </thead>
@@ -65,16 +65,16 @@ include('../templates/nav.php');
             <?php while ($row = mysqli_fetch_array($result)) {
                 ?>               <!--produkt con-->
                 <tr>
-                    <th scope="row">1</th>
-                    <td style="margin: 0; width: 200px"><img src="<?php echo $row['image']; ?>" height="1%"></td>
+                    
+                    <td style="margin: 0; width: 200px"><img src="<?php echo $row['image']; ?>" height="40vh"></td>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php $counts = array_count_values($_SESSION['cart']);
                         $sum += $counts[$row['prodID']] * $row['price'];
                         echo $counts[$row['prodID']]; ?></td>
-                    <td> <?php echo $row['price']; ?></td>
+                    <td> <?php echo $counts[$row['prodID']] * $row['price'];?></td>
                     <td>
                         <form method="post" name="id" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                            <button name="deleteProd"> delete</button>
+                            <button name="deleteProd"> ta bort</button>
                         </form>
                     </td>
 
@@ -91,11 +91,13 @@ include('../templates/nav.php');
         </table>
 
     </div>
-    <?php     echo $sum; ?>
+   <h5 style="padding:10px;"> totalt pris $<?php     echo $sum; ?> </h5>
 
     <!--skickar till checkout.php-->
     <form method="GET" action="checkout.php">
-        <button name="complete" type="submit">köp</button>
+        <button name="complete" type="submit" class="btn btn-success">köp</button>
+        <button class="btn" style="background-color:red; "> <a class="empty"  style="padding-right: 5px; color:white" title="Töm alla varor ur kundvagnen" href="kundvagn.php?action=clear_cart" method="GET" >töm kundvagn
+                </a> </button>
     </form>
 
 
